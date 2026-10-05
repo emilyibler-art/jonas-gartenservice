@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jonas Gartenservice – Gartenarbeiten und Hausmeisterdienst in Hersbruck</title>
 <meta name="description" content="Jonas Gartenservice aus Hersbruck: Rasen- und Heckenpflege, Pflanzarbeiten, Containerdienst und Saisonarbeiten. Zuverlässig, sauber, regional.">
-<link rel="canonical" href="https://jonas-ibler-gartenservice.net/">
 <link rel="icon" type="image/svg+xml" href="assets/JI_Bildmarke_Farbe.svg">
 <style>
 @font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/montserrat-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -50,7 +49,7 @@ h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.01em}
 
 /* Hero */
 .hero{position:relative;color:#fff;background:var(--anth);isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/img/hero.png) center/cover no-repeat;transform:scale(1.06);animation:slow-zoom 18s var(--ease) forwards}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/img/hero.jpg) center/cover no-repeat;transform:scale(1.06);animation:slow-zoom 18s var(--ease) forwards}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(40,40,39,.9) 0%,rgba(40,40,39,.62) 55%,rgba(40,40,39,.25) 100%)}
 @keyframes slow-zoom{to{transform:scale(1)}}
 .hero-inner{padding:clamp(100px,13vw,180px) 0 clamp(130px,15vw,200px)}
@@ -148,7 +147,7 @@ dialog.panel[open]::backdrop{background:rgba(40,40,39,.62)}
 .x{width:46px;height:46px;border-radius:var(--r);border:0;background:var(--anth);color:var(--lime);font:700 30px/1 "Montserrat",sans-serif;cursor:pointer;display:grid;place-items:center;transition:transform .25s var(--ease),background .2s}
 .x:hover{transform:rotate(90deg);background:#2f2f2e}
 .legal{padding:clamp(28px,5vw,56px) var(--pad) 80px}
-.legal h1{font-size:clamp(34px,5vw,52px);text-transform:uppercase;margin-bottom:34px;padding-bottom:22px;border-bottom:5px solid var(--lime)}
+.legal .legal-title{font-size:clamp(34px,5vw,52px);text-transform:uppercase;margin-bottom:34px;padding-bottom:22px;border-bottom:5px solid var(--lime)}
 .legal h2{font-size:23px;margin:46px 0 8px}
 .legal h3{font-size:18px;margin:28px 0 6px;color:var(--slate)}
 .legal p{margin:10px 0;font-size:16px}
@@ -210,7 +209,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 <header class="site-header" id="top">
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Jonas Gartenservice – Startseite"><img src="assets/Logo_Horizontal_Anthrazit.svg" alt="Jonas Gartenservice"></a>
-    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <button type="button" class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="#leistungen">Leistungen</a></li>
       <li><a href="#vertrauen">Warum wir</a></li>
@@ -360,7 +359,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 <dialog class="panel" id="impressum" aria-labelledby="imp-h">
   <div class="panel-bar"><img src="assets/Logo_Horizontal_Anthrazit.svg" alt=""><button class="x" type="button" data-close aria-label="Schließen">×</button></div>
   <div class="legal">
-    <h1 id="imp-h">Impressum</h1>
+    <div class="legal-title" role="heading" aria-level="2" id="imp-h">Impressum</div>
     <h2>Angaben gemäß § 5 DDG</h2>
     <p>Jonas Ibler<br>Am Steig 38<br>91217 Hersbruck<br>Deutschland</p>
     <h2>Kontakt</h2>
@@ -382,7 +381,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 <dialog class="panel" id="datenschutz" aria-labelledby="dat-h">
   <div class="panel-bar"><img src="assets/Logo_Horizontal_Anthrazit.svg" alt=""><button class="x" type="button" data-close aria-label="Schließen">×</button></div>
   <div class="legal">
-    <h1 id="dat-h">Datenschutz</h1>
+    <div class="legal-title" role="heading" aria-level="2" id="dat-h">Datenschutz</div>
     <h2>Datenschutz auf einen Blick</h2>
     <h3>Allgemeine Hinweise</h3>
     <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie dieser Datenschutzerklärung.</p>
