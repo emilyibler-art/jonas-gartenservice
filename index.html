@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonas Gartenservice – Gartenarbeiten und Hausmeisterdienst in Hersbruck</title>
+<meta name="description" content="Jonas Gartenservice aus Hersbruck: Rasen- und Heckenpflege, Pflanzarbeiten, Containerdienst und Saisonarbeiten. Zuverlässig, sauber, regional.">
+<link rel="icon" type="image/svg+xml" href="assets/JI_Bildmarke_Farbe.svg">
+<style>
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/montserrat-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/montserrat-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{
+  --lime:#C5D34A; --lime-20:#F3F6DB; --anth:#3C3C3B; --slate:#5C5C5E; --paper:#F2F2EF; --olive:#9C9A24; --white:#fff;
+  --r:8px; --r-lg:14px; --max:1180px; --pad:clamp(20px,5vw,48px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"Montserrat",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--anth);background:var(--white);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.01em}
+.wrap{width:min(100% - 2*var(--pad),var(--max));margin-inline:auto}
+.hl{color:var(--lime)} .on-light .hl{color:var(--olive)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font:700 16px/1 "Montserrat",sans-serif;padding:16px 26px;border-radius:var(--r);border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(0,0,0,.45)}
+.btn-lime{background:var(--lime);color:var(--anth)} .btn-lime:hover{background:#d3df63}
+.btn-dark{background:var(--anth);color:var(--lime)} .btn-dark:hover{background:#2f2f2e}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff} .btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(60,60,59,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.nav .logo img{height:40px;width:auto}
+.menu{display:flex;align-items:center;gap:34px;list-style:none;padding:0}
+.menu a:not(.btn){text-decoration:none;font-weight:600;font-size:16px;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.menu a:not(.btn):hover::after{transform:scaleX(1)}
+.burger{display:none;background:var(--anth);border:0;border-radius:var(--r);width:46px;height:46px;cursor:pointer;position:relative}
+.burger span,.burger::before,.burger::after{content:"";position:absolute;left:12px;right:12px;height:3px;border-radius:2px;background:var(--lime);transition:transform .3s var(--ease),opacity .2s}
+.burger::before{top:15px} .burger span{top:21.5px} .burger::after{top:28px}
+.nav-open .burger::before{transform:translateY(6.5px) rotate(45deg)}
+.nav-open .burger::after{transform:translateY(-6.5px) rotate(-45deg)}
+.nav-open .burger span{opacity:0}
+
+/* Hero */
+.hero{position:relative;color:#fff;background:var(--anth);isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/img/hero.png) center/cover no-repeat;transform:scale(1.06);animation:slow-zoom 18s var(--ease) forwards}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(40,40,39,.9) 0%,rgba(40,40,39,.62) 55%,rgba(40,40,39,.25) 100%)}
+@keyframes slow-zoom{to{transform:scale(1)}}
+.hero-inner{padding:clamp(84px,13vw,170px) 0 clamp(120px,15vw,190px);max-width:760px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--lime);border-radius:2px}
+.hero h1{font-size:clamp(40px,7vw,78px);text-transform:uppercase;margin-bottom:24px}
+.hero p.lead{font-size:clamp(18px,2vw,21px);max-width:560px;color:rgba(255,255,255,.9);margin-bottom:38px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+.band{position:absolute;left:0;right:0;bottom:-1px;height:clamp(64px,8vw,120px);overflow:hidden;pointer-events:none}.band img{position:absolute;left:0;bottom:0;width:100%;height:auto}
+.hero .load{opacity:0;transform:translateY(24px);animation:rise .9s var(--ease) forwards}
+.hero .load:nth-child(2){animation-delay:.12s}.hero .load:nth-child(3){animation-delay:.24s}.hero .load:nth-child(4){animation-delay:.36s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* Sections */
+section{padding:clamp(72px,10vw,128px) 0}
+.sec-head{max-width:720px;margin-bottom:clamp(40px,6vw,64px)}
+.sec-head h2{font-size:clamp(32px,5vw,54px);text-transform:uppercase}
+.sec-head p{margin-top:16px;font-size:19px;color:var(--slate)}
+.dark .sec-head p{color:rgba(255,255,255,.78)}
+.dark{background:var(--anth);color:#fff}
+.paper{background:var(--paper)}
+.center{text-align:center;margin-inline:auto}
+
+/* Medallion row */
+.medals{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:-72px;position:relative;z-index:2}
+.medal{flex:1 1 150px;background:#fff;border-radius:var(--r-lg);padding:26px 14px 22px;text-align:center;box-shadow:0 22px 46px -28px rgba(40,40,39,.55);transition:transform .35s var(--ease),box-shadow .35s}
+.medal:hover{transform:translateY(-6px);box-shadow:0 28px 50px -24px rgba(40,40,39,.6)}
+.medal img{width:66px;height:66px;margin:0 auto 14px;transition:transform .5s var(--ease)}
+.medal:hover img{transform:rotate(-6deg) scale(1.06)}
+.medal b{display:block;font-size:15px;line-height:1.3;font-weight:700}
+
+/* Services */
+.services{display:grid;gap:28px}
+.service{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 26px 60px -40px rgba(40,40,39,.5);border:1px solid rgba(60,60,59,.07)}
+.service:nth-child(even) .s-img{order:2}
+.s-img{min-height:340px;background-size:cover;background-position:center;transition:transform .8s var(--ease)}
+.s-img-wrap{overflow:hidden;min-height:340px}
+.service:hover .s-img{transform:scale(1.05)}
+.s-body{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:14px}
+.s-body .ico{width:58px;height:58px}
+.s-body h3{font-size:clamp(26px,3vw,34px)}
+.s-body p{color:var(--slate)}
+.tick{list-style:none;padding:0;display:grid;gap:8px;margin-top:6px}
+.tick li{position:relative;padding-left:30px;font-weight:600;font-size:16px}
+.tick li::before{content:"";position:absolute;left:0;top:.45em;width:18px;height:10px;border-left:3px solid var(--olive);border-bottom:3px solid var(--olive);transform:rotate(-45deg) scale(.8);transform-origin:center}
+.s-icon-only{background:var(--lime-20)}
+.s-icon-only .s-img-wrap{display:flex;align-items:center;justify-content:center}
+.s-icon-only .big{width:170px;height:170px}
+
+/* Why */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:30px 24px 28px;transition:background .3s,transform .35s var(--ease),border-color .3s}
+.why:hover{background:rgba(255,255,255,.1);transform:translateY(-6px);border-color:var(--lime)}
+.why .n{display:block;font-size:44px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:18px}
+.why h3{font-size:19px;line-height:1.3;font-weight:700}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(32px,6vw,80px);align-items:start}
+.contact-list{list-style:none;padding:0;display:grid;gap:18px;margin-top:30px}
+.contact-list li{display:flex;align-items:center;gap:16px;font-weight:700;font-size:18px}
+.contact-list img{width:38px;height:38px;flex:none}
+.contact-list a{text-decoration:none}.contact-list a:hover{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px}
+.slogan{width:230px;margin-top:44px}
+form{background:var(--paper);border-radius:var(--r-lg);padding:clamp(24px,4vw,42px);display:grid;gap:18px}
+label{font-weight:700;font-size:15px;display:grid;gap:8px}
+input[type=text],input[type=email],textarea{font:500 16px/1.4 "Montserrat",sans-serif;color:var(--anth);background:#fff;border:2px solid transparent;border-radius:var(--r);padding:15px 16px;width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus{border-color:var(--lime);outline:none;box-shadow:0 0 0 4px rgba(197,211,74,.28)}
+textarea{min-height:140px;resize:vertical}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:500;font-size:14.5px;line-height:1.5}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--anth);flex:none}
+.link{background:none;border:0;padding:0;font:inherit;font-weight:700;color:inherit;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:3px;cursor:pointer}
+.form-note{font-size:13px;color:var(--slate)}
+
+/* Footer */
+footer{background:var(--anth);color:#fff;position:relative;padding-top:0}
+footer .band-top{position:relative;height:clamp(56px,7vw,100px);overflow:hidden}footer .band-top img{position:absolute;left:0;top:0;width:100%;height:auto}
+.foot-main{display:flex;flex-wrap:wrap;gap:36px 60px;align-items:center;justify-content:space-between;padding:56px 0 40px}
+.foot-main img.logo{height:46px;width:auto}
+.foot-slogan{width:200px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:22px 0 30px;display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;font-size:14px;color:rgba(255,255,255,.75)}
+.foot-bottom nav{display:flex;gap:26px;align-items:center}
+.foot-bottom button,.foot-bottom a{background:none;border:0;color:#fff;font:600 14px "Montserrat",sans-serif;cursor:pointer;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+.foot-bottom button:hover,.foot-bottom a:hover{color:var(--lime);border-color:var(--lime)}
+
+/* Overlay panels (Impressum / Datenschutz) */
+dialog.panel{margin:0 0 0 auto;border:0;padding:0;width:min(880px,100%);max-width:100%;height:100dvh;max-height:100dvh;background:#fff;color:var(--anth);overflow:auto;box-shadow:-30px 0 80px -30px rgba(0,0,0,.6);transform:translateX(100%);transition:transform .5s var(--ease),overlay .5s allow-discrete,display .5s allow-discrete}
+dialog.panel[open]{transform:none}
+@starting-style{dialog.panel[open]{transform:translateX(100%)}}
+dialog.panel::backdrop{background:rgba(40,40,39,0);transition:background .5s,overlay .5s allow-discrete,display .5s allow-discrete}
+dialog.panel[open]::backdrop{background:rgba(40,40,39,.62)}
+@starting-style{dialog.panel[open]::backdrop{background:rgba(40,40,39,0)}}
+.panel-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:16px var(--pad);background:rgba(255,255,255,.96);border-bottom:1px solid rgba(60,60,59,.1)}
+.panel-bar img{height:32px;width:auto}
+.x{width:46px;height:46px;border-radius:var(--r);border:0;background:var(--anth);color:var(--lime);font:700 30px/1 "Montserrat",sans-serif;cursor:pointer;display:grid;place-items:center;transition:transform .25s var(--ease),background .2s}
+.x:hover{transform:rotate(90deg);background:#2f2f2e}
+.legal{padding:clamp(28px,5vw,56px) var(--pad) 80px}
+.legal h1{font-size:clamp(34px,5vw,52px);text-transform:uppercase;margin-bottom:34px;padding-bottom:22px;border-bottom:5px solid var(--lime)}
+.legal h2{font-size:23px;margin:46px 0 8px}
+.legal h3{font-size:18px;margin:28px 0 6px;color:var(--slate)}
+.legal p{margin:10px 0;font-size:16px}
+.legal a{font-weight:600}
+
+/* Hinweis */
+dialog.notice{margin:auto;border:0;padding:0;width:min(520px,calc(100% - 32px));border-radius:var(--r-lg);overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.65);background:#fff;color:var(--anth);opacity:0;transform:translateY(24px) scale(.97);transition:opacity .45s var(--ease),transform .45s var(--ease),overlay .45s allow-discrete,display .45s allow-discrete}
+dialog.notice[open]{opacity:1;transform:none}
+@starting-style{dialog.notice[open]{opacity:0;transform:translateY(24px) scale(.97)}}
+dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
+.notice img.band-n{width:100%;height:auto}
+.notice-body{padding:26px 32px 32px}
+.notice h2{font-size:24px;margin-bottom:10px}
+.notice p{color:var(--slate);font-size:16px;margin-bottom:22px}
+.notice .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:980px){
+  .medal{flex:0 1 calc(33.333% - 12px)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  .burger{display:block}
+  .menu{position:absolute;left:0;right:0;top:76px;flex-direction:column;align-items:stretch;gap:0;background:#fff;padding:8px var(--pad) 24px;border-bottom:1px solid rgba(60,60,59,.1);box-shadow:0 30px 40px -30px rgba(0,0,0,.4);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.3s var(--ease)}
+  .nav-open .menu{transform:none;opacity:1;visibility:visible}
+  .menu li{border-bottom:1px solid rgba(60,60,59,.08)}
+  .menu li:last-child{border:0;padding-top:18px}
+  .menu a:not(.btn){display:block;padding:16px 0}
+  .service,.service:nth-child(even){grid-template-columns:1fr}
+  .service:nth-child(even) .s-img-wrap{order:0}
+  .s-img-wrap,.s-img{min-height:240px}
+  .s-icon-only .s-img-wrap{min-height:200px}
+  .hero::after{background:linear-gradient(180deg,rgba(40,40,39,.8),rgba(40,40,39,.7))}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .medals{margin-top:-56px}
+  .medal{flex:0 1 calc(50% - 9px)}
+  .why-grid{grid-template-columns:1fr}
+  .hero .actions .btn{width:100%}
+  .foot-main{flex-direction:column;align-items:flex-start}
+  dialog.panel{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal,.hero .load{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Jonas Gartenservice – Startseite"><img src="assets/Logo_Horizontal_Anthrazit.svg" alt="Jonas Gartenservice"></a>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#vertrauen">Warum wir</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a class="btn btn-dark" href="#kontakt">Termin vereinbaren</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="wrap hero-inner">
+    <span class="eyebrow load">Hersbruck &amp; Umgebung</span>
+    <h1 class="load">Ihr zuverlässiger <span class="hl">Gartenservice</span></h1>
+    <p class="lead load">Ob regelmäßige Pflege, Neugestaltung oder saisonale Arbeiten – wir kümmern uns professionell und zuverlässig um Ihren Garten.</p>
+    <div class="actions load">
+      <a class="btn btn-lime" href="#kontakt">Termin vereinbaren</a>
+      <a class="btn btn-ghost" href="#leistungen">Unsere Leistungen</a>
+    </div>
+  </div>
+  <div class="band" aria-hidden="true"><img src="assets/icons/Stilelement_Band_breit_unten.svg" alt=""></div>
+</section>
+
+<div class="wrap" style="padding:0">
+  <div class="medals">
+    <div class="medal reveal"><img src="assets/icons/Icon_Rasenmaeher_Kreis-Anthrazit.svg" alt=""><b>Rasenpflege</b></div>
+    <div class="medal reveal" style="--d:.08s"><img src="assets/icons/Icon_Heckenschnitt_Kreis-Anthrazit.svg" alt=""><b>Heckenschnitt</b></div>
+    <div class="medal reveal" style="--d:.16s"><img src="assets/icons/Icon_Pflanze_Kreis-Anthrazit.svg" alt=""><b>Pflanzarbeiten</b></div>
+    <div class="medal reveal" style="--d:.24s"><img src="assets/icons/Icon_Container_Kreis-Anthrazit.svg" alt=""><b>Containerdienst</b></div>
+    <div class="medal reveal" style="--d:.32s"><img src="assets/icons/Icon_Winterdienst_Kreis-Anthrazit.svg" alt=""><b>Saison &amp; Winterservice</b></div>
+  </div>
+</div>
+
+<section id="leistungen" class="on-light">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="color:var(--olive)">Leistungen</span>
+      <h2>Was wir <span class="hl">anbieten</span></h2>
+    </div>
+    <div class="services">
+      <article class="service reveal">
+        <div class="s-img-wrap"><div class="s-img" style="background-image:url(assets/img/hecke.jpg)" role="img" aria-label="Frisch geschnittene Hecke"></div></div>
+        <div class="s-body">
+          <img class="ico" src="assets/icons/Icon_Rasenmaeher_Kreis-Gruen.svg" alt="">
+          <h3>Gartenservice</h3>
+          <p>Wir übernehmen das Mähen von Großflächen und Gewerbegrundstücken und führen maschinellen Heckenschnitt sowie motormanuellen Hecken- und Gehölzschnitt durch.</p>
+          <ul class="tick">
+            <li>Freischneider- und Bodenfräsarbeiten</li>
+            <li>Bagger- und Pflanzarbeiten</li>
+            <li>Fachgerechte Entsorgung des Grünschnitts, Container bei Bedarf</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service reveal">
+        <div class="s-img-wrap"><div class="s-img" style="background-image:url(assets/img/container.jpg)" role="img" aria-label="Container mit Grünschnitt"></div></div>
+        <div class="s-body">
+          <img class="ico" src="assets/icons/Icon_Container_Kreis-Gruen.svg" alt="">
+          <h3>Containerdienst &amp; Mulden</h3>
+          <p>Von 3–7,5&nbsp;m³ – wenig Platz benötigt und passt in jede Hofeinfahrt. Fast bodenebene Containereinfahrt, kein Heben nötig.</p>
+          <ul class="tick">
+            <li>Entsorgung von Bauschutt, Erdaushub, Grünschnitt u.&nbsp;v.&nbsp;m.</li>
+            <li>Lieferung von Erde, Rindenmulch, Sand, Split u.&nbsp;v.&nbsp;m.</li>
+            <li>Tageweise Bereitstellung, schnell und flexibel</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service s-icon-only reveal">
+        <div class="s-img-wrap"><img class="big" src="assets/icons/Icon_Winterdienst_Kreis-Gruen.svg" alt=""></div>
+        <div class="s-body">
+          <h3>Saisonarbeiten</h3>
+          <p>Laubentfernung, Frühjahrs- und Winterservice – wir kümmern uns darum, damit Sie Zeit für die schönen Dinge haben.</p>
+          <p><a class="btn btn-dark" href="#kontakt" style="align-self:flex-start;margin-top:8px">Anfrage senden</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="vertrauen" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ihre Vorteile</span>
+      <h2>Warum Kunden <span class="hl">uns vertrauen</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><span class="n">01</span><h3>Zuverlässige Terminabsprachen</h3></div>
+      <div class="why reveal" style="--d:.1s"><span class="n">02</span><h3>Fachgerechte und saubere Ausführung</h3></div>
+      <div class="why reveal" style="--d:.2s"><span class="n">03</span><h3>Regionale Nähe und schnelle Erreichbarkeit</h3></div>
+      <div class="why reveal" style="--d:.3s"><span class="n">04</span><h3>Individuelle Beratung</h3></div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="on-light">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--olive)">Kontakt</span>
+      <h2 style="font-size:clamp(32px,5vw,54px);text-transform:uppercase">Wir freuen uns auf <span class="hl">Ihre Anfrage</span></h2>
+      <p style="margin-top:16px;color:var(--slate);font-size:19px">Wir beraten Sie persönlich und finden die passende Lösung für Ihr Anliegen.</p>
+      <ul class="contact-list">
+        <li><img src="assets/icons/Icon_Mail_Gruen.svg" alt=""><a href="mailto:jonas@ibler.net">jonas@ibler.net</a></li>
+        <li><img src="assets/icons/Icon_Telefon_Gruen.svg" alt=""><a href="tel:+4916096431868">+49 160 96431868</a></li>
+        <li><img src="assets/icons/Icon_Standort_Gruen.svg" alt=""><span>Hersbruck, Altensittenbach</span></li>
+      </ul>
+      <img class="slogan" src="assets/Slogan_Ihr-gruener-Daumen_Wiesengruen.svg" alt="Ihr grüner Daumen!" style="filter:brightness(.78) saturate(1.3)">
+    </div>
+    <form class="reveal" style="--d:.12s" id="form" novalidate>
+      <label>Name<input type="text" name="name" placeholder="Ihr Name" autocomplete="name" required></label>
+      <label>E-Mail<input type="email" name="email" placeholder="ihre@e-mail.de" autocomplete="email" required></label>
+      <label>Nachricht<textarea name="msg" placeholder="Wobei kann ich Ihnen helfen?" required></textarea></label>
+      <label class="check"><input type="checkbox" name="ok" required><span>Ich habe die <button type="button" class="link" data-open="datenschutz">Datenschutzerklärung</button> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.</span></label>
+      <button class="btn btn-dark" type="submit">Absenden</button>
+      <p class="form-note" id="form-note" role="status">Beim Absenden öffnet sich Ihr E-Mail-Programm mit der vorbereiteten Nachricht.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="band-top" aria-hidden="true"><img src="assets/icons/Stilelement_Band_breit_oben.svg" alt=""></div>
+  <div class="wrap">
+    <div class="foot-main">
+      <img class="logo" src="assets/Logo_Horizontal_Negativ.svg" alt="Jonas Gartenservice">
+      <img class="foot-slogan" src="assets/Slogan_Ihr-gruener-Daumen_Wiesengruen.svg" alt="Ihr grüner Daumen!">
+      <a class="btn btn-lime" href="mailto:jonas@ibler.net">jonas@ibler.net</a>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Jonas Ibler. Alle Rechte vorbehalten.</span>
+      <nav aria-label="Rechtliches und Social Media">
+        <a href="https://www.instagram.com/jonas_ib_/" target="_blank" rel="noopener">Instagram</a>
+        <button type="button" data-open="datenschutz">Datenschutz</button>
+        <button type="button" data-open="impressum">Impressum</button>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Impressum -->
+<dialog class="panel" id="impressum" aria-labelledby="imp-h">
+  <div class="panel-bar"><img src="assets/Logo_Horizontal_Anthrazit.svg" alt=""><button class="x" type="button" data-close aria-label="Schließen">×</button></div>
+  <div class="legal">
+    <h1 id="imp-h">Impressum</h1>
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <p>Jonas Ibler<br>Am Steig 38<br>91217 Hersbruck<br>Deutschland</p>
+    <h2>Kontakt</h2>
+    <p>Telefon: 0160 96431868<br>E-Mail: <a href="mailto:jonas@ibler.net">jonas@ibler.net</a></p>
+    <h2>Verbraucherstreitbeilegung</h2>
+    <p>Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p>
+    <h2>Haftung für Links</h2>
+    <p>Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
+    <h2>Urheberrecht</h2>
+    <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.</p>
+    <p>Quelle: <a href="https://www.e-recht24.de/" target="_blank" rel="noopener">e-recht24.de</a></p>
+    <p style="margin-top:30px;color:var(--slate);font-size:14px">[Entwurf – bitte vor Veröffentlichung rechtlich prüfen und ggf. Steuer-/USt-IdNr. ergänzen, falls vorhanden.]</p>
+  </div>
+</dialog>
+
+<!-- Datenschutz -->
+<dialog class="panel" id="datenschutz" aria-labelledby="dat-h">
+  <div class="panel-bar"><img src="assets/Logo_Horizontal_Anthrazit.svg" alt=""><button class="x" type="button" data-close aria-label="Schließen">×</button></div>
+  <div class="legal">
+    <h1 id="dat-h">Datenschutz</h1>
+    <h2>Datenschutz auf einen Blick</h2>
+    <h3>Allgemeine Hinweise</h3>
+    <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie dieser Datenschutzerklärung.</p>
+    <h3>Datenerfassung auf dieser Website</h3>
+    <p><b>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</b><br>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten finden Sie im Abschnitt „Hinweis zur verantwortlichen Stelle“ in dieser Datenschutzerklärung.</p>
+    <p><b>Wie erfasse ich Ihre Daten?</b><br>Ihre Daten werden zum einen dadurch erhoben, dass Sie sie mir mitteilen, zum Beispiel über das Kontaktformular. Andere Daten werden beim Besuch der Website automatisch durch die IT-Systeme des Hosting-Anbieters erfasst, vor allem technische Daten wie Browser, Betriebssystem oder Uhrzeit des Seitenaufrufs.</p>
+    <p><b>Wofür nutze ich Ihre Daten?</b><br>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten nutze ich, um Ihre Anfragen zu beantworten.</p>
+    <p><b>Welche Rechte haben Sie bezüglich Ihrer Daten?</b><br>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie auf Berichtigung, Löschung und Einschränkung der Verarbeitung. Eine erteilte Einwilligung können Sie jederzeit widerrufen. Außerdem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Für Fragen können Sie sich jederzeit an mich wenden.</p>
+
+    <h2>Hosting und Schriftart</h2>
+    <h3>Hosting</h3>
+    <p>Diese Website wird bei [Hosting-Anbieter, z. B. STRATO AG, Pasteurstraße 20, 10407 Berlin] gehostet. Beim Besuch der Website erfasst der Hoster technische Zugriffsdaten (Server-Logfiles), unter anderem Ihre IP-Adresse. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: Ich habe ein berechtigtes Interesse an einer zuverlässigen Darstellung und Sicherheit meiner Website. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung.</p>
+    <h3>Schriftart</h3>
+    <p>Die verwendete Schrift Montserrat ist lokal auf dem Server eingebunden. Es werden keine Daten an Google oder andere Anbieter übertragen.</p>
+    <h3>Hinweisfenster</h3>
+    <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Ob Sie das Hinweisfenster bereits bestätigt haben, wird ausschließlich lokal in Ihrem Browser gespeichert (Local Storage) und nicht an mich übertragen. Dies ist technisch erforderlich (§ 25 Abs. 2 TDDDG).</p>
+
+    <h2>Allgemeine Hinweise und Pflichtinformationen</h2>
+    <h3>Datenschutz</h3>
+    <p>Ich nehme den Schutz Ihrer persönlichen Daten sehr ernst. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+    <p>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Diese Erklärung erläutert, welche Daten ich erhebe und wofür ich sie nutze.</p>
+    <p>Bitte beachten Sie, dass die Datenübertragung im Internet, zum Beispiel bei der Kommunikation per E-Mail, Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+    <h3>Hinweis zur verantwortlichen Stelle</h3>
+    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br>Jonas Ibler<br>Am Steig 38<br>91217 Hersbruck<br>Deutschland<br>Telefon: 0160 96431868<br>E-Mail: <a href="mailto:jonas@ibler.net">jonas@ibler.net</a></p>
+    <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+    <h3>Speicherdauer</h3>
+    <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei mir, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern keine anderen rechtlich zulässigen Gründe für die Speicherung bestehen (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+    <h3>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h3>
+    <p>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeite ich Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeite ich Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeite ich Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind, auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage meines berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen informiere ich in den folgenden Absätzen.</p>
+    <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+    <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+    <h3>Recht auf Datenübertragbarkeit</h3>
+    <p>Sie haben das Recht, Daten, die ich auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeite, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
+    <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+    <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an mich senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile. Wenn die Verschlüsselung aktiviert ist, können die Daten, die Sie an mich übermitteln, nicht von Dritten mitgelesen werden.</p>
+    <h3>Auskunft, Löschung und Berichtigung</h3>
+    <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und gegebenenfalls ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an mich wenden.</p>
+    <h3>Recht auf Einschränkung der Verarbeitung</h3>
+    <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an mich wenden. Das Recht besteht in folgenden Fällen:<br>– Wenn Sie die Richtigkeit Ihrer gespeicherten Daten bestreiten, benötige ich in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung können Sie die Einschränkung verlangen.<br>– Wenn die Verarbeitung unrechtmäßig geschah, können Sie statt der Löschung die Einschränkung verlangen.<br>– Wenn ich Ihre Daten nicht mehr benötige, Sie diese aber zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen brauchen, können Sie statt der Löschung die Einschränkung verlangen.<br>– Wenn Sie Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und meinen Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, können Sie die Einschränkung verlangen.</p>
+    <p>Wurde die Verarbeitung eingeschränkt, dürfen die Daten abgesehen von ihrer Speicherung nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte anderer verarbeitet werden.</p>
+
+    <h2>Datenerfassung auf dieser Website</h2>
+    <h3>Kontaktformular</h3>
+    <p>Wenn Sie mir per Kontaktformular eine Anfrage senden, wird Ihr E-Mail-Programm mit den von Ihnen eingegebenen Angaben geöffnet. Die Angaben aus dem Formular einschließlich der von Ihnen angegebenen Kontaktdaten werden zum Zweck der Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.</p>
+    <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht sie auf meinem berechtigten Interesse an der effektiven Bearbeitung der Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde.</p>
+    <p>Die von Ihnen eingegebenen Daten verbleiben bei mir, bis Sie mich zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen, insbesondere Aufbewahrungsfristen, bleiben unberührt.</p>
+    <h3>Anfrage per E-Mail oder Telefon</h3>
+    <p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zweck der Bearbeitung Ihres Anliegens bei mir gespeichert und verarbeitet. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.</p>
+    <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf meinem berechtigten Interesse an der effektiven Bearbeitung der Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde.</p>
+    <p>Die von Ihnen an mich übersandten Daten verbleiben bei mir, bis Sie mich zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt, zum Beispiel nach abgeschlossener Bearbeitung Ihres Anliegens. Zwingende gesetzliche Bestimmungen, insbesondere gesetzliche Aufbewahrungsfristen, bleiben unberührt.</p>
+    <p style="margin-top:30px;color:var(--slate);font-size:14px">[Entwurf – bitte vor Veröffentlichung rechtlich prüfen und den Hosting-Anbieter eintragen.]</p>
+  </div>
+</dialog>
+
+<!-- Hinweisfenster -->
+<dialog class="notice" id="notice" aria-labelledby="notice-h">
+  <img class="band-n" src="assets/icons/Stilelement_Band_breit_oben.svg" alt="" aria-hidden="true">
+  <div class="notice-body">
+    <h2 id="notice-h">Hinweis zum Datenschutz</h2>
+    <p>Diese Website verwendet keine Tracking- oder Marketing-Cookies. Details finden Sie in der Datenschutzerklärung.</p>
+    <div class="row">
+      <button class="btn btn-dark" type="button" id="notice-ok">Verstanden</button>
+      <button class="link" type="button" data-open="datenschutz">Datenschutzerklärung lesen</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(()=>{
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+  const notice=$('#notice');
+  const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+  /* Panels: any opener opens its dialog; closes from ×, Esc or backdrop click; they can be reopened any number of times */
+  function openPanel(id){
+    $$('dialog.panel[open]').forEach(d=>{if(d.id!==id)d.close()});
+    const d=document.getElementById(id); if(!d) return;
+    if(notice.open) notice.close();
+    if(!d.open) d.showModal();
+    d.scrollTop=0;
+    history.replaceState(null,'','#'+id);
+  }
+  document.addEventListener('click',e=>{
+    const o=e.target.closest('[data-open]');
+    if(o){e.preventDefault();openPanel(o.dataset.open);return}
+    const c=e.target.closest('[data-close]');
+    if(c){c.closest('dialog').close();return}
+    const dlg=e.target.closest('dialog.panel');
+    if(dlg===e.target){ // click on backdrop (dialog element itself, outside panel box)
+      const r=dlg.getBoundingClientRect();
+      if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom) dlg.close();
+    }
+  });
+  $$('dialog.panel').forEach(d=>d.addEventListener('close',()=>{
+    if(location.hash==='#'+d.id) history.replaceState(null,'',location.pathname+location.search);
+  }));
+  if(location.hash==='#impressum'||location.hash==='#datenschutz') openPanel(location.hash.slice(1));
+
+  /* Hinweis beim ersten Besuch */
+  $('#notice-ok').addEventListener('click',()=>{store.set('jg-hinweis','1');notice.close()});
+  notice.addEventListener('cancel',e=>e.preventDefault()); // Esc schließt das Hinweisfenster nicht – bewusst bestätigen
+  if(!store.get('jg-hinweis') && !(location.hash==='#impressum'||location.hash==='#datenschutz')) setTimeout(()=>notice.showModal(),600);
+
+  /* Mobile Menü */
+  const burger=$('.burger'), header=$('.site-header');
+  burger.addEventListener('click',()=>{const o=header.classList.toggle('nav-open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')});
+  $$('.menu a').forEach(a=>a.addEventListener('click',()=>{header.classList.remove('nav-open');burger.setAttribute('aria-expanded','false')}));
+
+  /* Scroll-Animationen */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+  $$('.reveal').forEach(el=>io.observe(el));
+
+  /* Formular -> vorbereitete E-Mail */
+  const form=$('#form'), note=$('#form-note');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return}
+    const f=new FormData(form);
+    const body=`${f.get('msg')}\n\n— ${f.get('name')} (${f.get('email')})`;
+    location.href='mailto:jonas@ibler.net?subject='+encodeURIComponent('Anfrage über die Website')+'&body='+encodeURIComponent(body);
+    note.textContent='Danke! Ihr E-Mail-Programm sollte sich jetzt öffnen. Falls nicht, schreiben Sie direkt an jonas@ibler.net.';
+  });
+  $('#yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

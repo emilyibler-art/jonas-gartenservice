@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.12 39.12">
+  <g id="Ebene_7" data-name="Ebene 7">
+    <circle fill="#3c3c3b" cx="19.56" cy="19.56" r="19.56"/>
+    <g fill="none" stroke="#c5d34a" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15.2,24.8L23.9,9.5M23.9,24.8L15.2,9.5"/><circle cx="13.62" cy="27.58" r="3.2"/><circle cx="25.5" cy="27.58" r="3.2"/><circle cx="19.56" cy="17.15" r="0.9" fill="#c5d34a" stroke="none"/>
+    </g>
+  </g>
+</svg>
