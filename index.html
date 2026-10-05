@@ -23,7 +23,7 @@ img,svg{display:block;max-width:100%}
 a{color:inherit}
 h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.01em}
 .wrap{width:min(100% - 2*var(--pad),var(--max));margin-inline:auto}
-.hl{color:var(--lime)} .on-light .hl{color:var(--olive)}
+.hl{color:var(--lime)} .on-light .hl{color:var(--lime)}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font:700 16px/1 "Montserrat",sans-serif;padding:16px 26px;border-radius:var(--r);border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s,box-shadow .25s}
@@ -53,13 +53,14 @@ h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.01em}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/img/hero.png) center/cover no-repeat;transform:scale(1.06);animation:slow-zoom 18s var(--ease) forwards}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(40,40,39,.9) 0%,rgba(40,40,39,.62) 55%,rgba(40,40,39,.25) 100%)}
 @keyframes slow-zoom{to{transform:scale(1)}}
-.hero-inner{padding:clamp(84px,13vw,170px) 0 clamp(120px,15vw,190px);max-width:760px}
+.hero-inner{padding:clamp(100px,13vw,180px) 0 clamp(130px,15vw,200px)}
+.hero-inner>*{max-width:740px}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:22px}
-.eyebrow::before{content:"";width:34px;height:3px;background:var(--lime);border-radius:2px}
-.hero h1{font-size:clamp(40px,7vw,78px);text-transform:uppercase;margin-bottom:24px}
+.eyebrow.dk{color:var(--anth)}.eyebrow.dk::before{width:44px;height:5px}.eyebrow::before{content:"";width:34px;height:3px;background:var(--lime);border-radius:2px}
+.hero h1{font-size:clamp(40px,7vw,78px);overflow-wrap:break-word;text-transform:uppercase;margin-bottom:24px}
 .hero p.lead{font-size:clamp(18px,2vw,21px);max-width:560px;color:rgba(255,255,255,.9);margin-bottom:38px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:14px}
-.band{position:absolute;left:0;right:0;bottom:-1px;height:clamp(64px,8vw,120px);overflow:hidden;pointer-events:none}.band img{position:absolute;left:0;bottom:0;width:100%;height:auto}
+.band{position:absolute;left:0;right:0;height:clamp(64px,7.2vw,116px);pointer-events:none;z-index:1}.band img{width:100%;height:100%;display:block}.band.b{bottom:-1px}.band.t{top:0}
 .hero .load{opacity:0;transform:translateY(24px);animation:rise .9s var(--ease) forwards}
 .hero .load:nth-child(2){animation-delay:.12s}.hero .load:nth-child(3){animation-delay:.24s}.hero .load:nth-child(4){animation-delay:.36s}
 @keyframes rise{to{opacity:1;transform:none}}
@@ -86,8 +87,8 @@ section{padding:clamp(72px,10vw,128px) 0}
 .services{display:grid;gap:28px}
 .service{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 26px 60px -40px rgba(40,40,39,.5);border:1px solid rgba(60,60,59,.07)}
 .service:nth-child(even) .s-img{order:2}
-.s-img{min-height:340px;background-size:cover;background-position:center;transition:transform .8s var(--ease)}
-.s-img-wrap{overflow:hidden;min-height:340px}
+.s-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s var(--ease)}
+.s-img-wrap{position:relative;overflow:hidden;min-height:340px}
 .service:hover .s-img{transform:scale(1.05)}
 .s-body{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:14px}
 .s-body .ico{width:58px;height:58px}
@@ -95,8 +96,8 @@ section{padding:clamp(72px,10vw,128px) 0}
 .s-body p{color:var(--slate)}
 .tick{list-style:none;padding:0;display:grid;gap:8px;margin-top:6px}
 .tick li{position:relative;padding-left:30px;font-weight:600;font-size:16px}
-.tick li::before{content:"";position:absolute;left:0;top:.45em;width:18px;height:10px;border-left:3px solid var(--olive);border-bottom:3px solid var(--olive);transform:rotate(-45deg) scale(.8);transform-origin:center}
-.s-icon-only{background:var(--lime-20)}
+.tick li::before{content:"";position:absolute;left:0;top:.45em;width:18px;height:10px;border-left:4px solid var(--lime);border-bottom:4px solid var(--lime);transform:rotate(-45deg) scale(.8);transform-origin:center}
+.s-saison{background:url(assets/img/saison.jpg) center 62%/cover no-repeat,url(assets/icons/Grafik_Gras_Gruen.svg) center 92%/72% auto no-repeat,var(--lime-20)}
 .s-icon-only .s-img-wrap{display:flex;align-items:center;justify-content:center}
 .s-icon-only .big{width:170px;height:170px}
 
@@ -126,7 +127,7 @@ textarea{min-height:140px;resize:vertical}
 
 /* Footer */
 footer{background:var(--anth);color:#fff;position:relative;padding-top:0}
-footer .band-top{position:relative;height:clamp(56px,7vw,100px);overflow:hidden}footer .band-top img{position:absolute;left:0;top:0;width:100%;height:auto}
+footer .band-top{position:relative;height:clamp(64px,7.2vw,116px)}footer .band-top img{width:100%;height:100%;display:block}
 .foot-main{display:flex;flex-wrap:wrap;gap:36px 60px;align-items:center;justify-content:space-between;padding:56px 0 40px}
 .foot-main img.logo{height:46px;width:auto}
 .foot-slogan{width:200px}
@@ -158,7 +159,7 @@ dialog.notice{margin:auto;border:0;padding:0;width:min(520px,calc(100% - 32px));
 dialog.notice[open]{opacity:1;transform:none}
 @starting-style{dialog.notice[open]{opacity:0;transform:translateY(24px) scale(.97)}}
 dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
-.notice img.band-n{width:100%;height:auto}
+.notice img.band-n{width:100%;height:70px;display:block}
 .notice-body{padding:26px 32px 32px}
 .notice h2{font-size:24px;margin-bottom:10px}
 .notice p{color:var(--slate);font-size:16px;margin-bottom:22px}
@@ -183,12 +184,14 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
   .menu a:not(.btn){display:block;padding:16px 0}
   .service,.service:nth-child(even){grid-template-columns:1fr}
   .service:nth-child(even) .s-img-wrap{order:0}
-  .s-img-wrap,.s-img{min-height:240px}
+  .s-img-wrap{min-height:240px}
   .s-icon-only .s-img-wrap{min-height:200px}
   .hero::after{background:linear-gradient(180deg,rgba(40,40,39,.8),rgba(40,40,39,.7))}
 }
 @media (max-width:560px){
   body{font-size:16px}
+  .hero h1{font-size:clamp(30px,9.4vw,44px);overflow-wrap:break-word}
+  .hero-inner{padding-top:96px}
   .medals{margin-top:-56px}
   .medal{flex:0 1 calc(50% - 9px)}
   .why-grid{grid-template-columns:1fr}
@@ -221,14 +224,15 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 <section class="hero" style="padding:0">
   <div class="wrap hero-inner">
     <span class="eyebrow load">Hersbruck &amp; Umgebung</span>
-    <h1 class="load">Ihr zuverlässiger <span class="hl">Gartenservice</span></h1>
+    <h1 class="load">Ihr starker <span class="hl">Gartenservice</span></h1>
     <p class="lead load">Ob regelmäßige Pflege, Neugestaltung oder saisonale Arbeiten – wir kümmern uns professionell und zuverlässig um Ihren Garten.</p>
     <div class="actions load">
       <a class="btn btn-lime" href="#kontakt">Termin vereinbaren</a>
       <a class="btn btn-ghost" href="#leistungen">Unsere Leistungen</a>
     </div>
   </div>
-  <div class="band" aria-hidden="true"><img src="assets/icons/Stilelement_Band_breit_unten.svg" alt=""></div>
+  <div class="band t" aria-hidden="true"><img src="assets/band-top.svg" alt=""></div>
+  <div class="band b" aria-hidden="true"><img src="assets/band-bottom.svg" alt=""></div>
 </section>
 
 <div class="wrap" style="padding:0">
@@ -244,7 +248,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 <section id="leistungen" class="on-light">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow" style="color:var(--olive)">Leistungen</span>
+      <span class="eyebrow dk">Leistungen</span>
       <h2>Was wir <span class="hl">anbieten</span></h2>
     </div>
     <div class="services">
@@ -276,12 +280,17 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
         </div>
       </article>
 
-      <article class="service s-icon-only reveal">
-        <div class="s-img-wrap"><img class="big" src="assets/icons/Icon_Winterdienst_Kreis-Gruen.svg" alt=""></div>
+      <article class="service reveal">
+        <div class="s-img-wrap"><div class="s-img s-saison" role="img" aria-label="Saisonarbeiten im Garten"></div></div>
         <div class="s-body">
+          <img class="ico" src="assets/icons/Icon_Winterdienst_Kreis-Gruen.svg" alt="">
           <h3>Saisonarbeiten</h3>
           <p>Laubentfernung, Frühjahrs- und Winterservice – wir kümmern uns darum, damit Sie Zeit für die schönen Dinge haben.</p>
-          <p><a class="btn btn-dark" href="#kontakt" style="align-self:flex-start;margin-top:8px">Anfrage senden</a></p>
+          <ul class="tick">
+            <li>Laubentfernung</li>
+            <li>Frühjahrsservice</li>
+            <li>Winterservice</li>
+          </ul>
         </div>
       </article>
     </div>
@@ -306,7 +315,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 <section id="kontakt" class="on-light">
   <div class="wrap contact-grid">
     <div class="reveal">
-      <span class="eyebrow" style="color:var(--olive)">Kontakt</span>
+      <span class="eyebrow dk">Kontakt</span>
       <h2 style="font-size:clamp(32px,5vw,54px);text-transform:uppercase">Wir freuen uns auf <span class="hl">Ihre Anfrage</span></h2>
       <p style="margin-top:16px;color:var(--slate);font-size:19px">Wir beraten Sie persönlich und finden die passende Lösung für Ihr Anliegen.</p>
       <ul class="contact-list">
@@ -314,7 +323,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
         <li><img src="assets/icons/Icon_Telefon_Gruen.svg" alt=""><a href="tel:+4916096431868">+49 160 96431868</a></li>
         <li><img src="assets/icons/Icon_Standort_Gruen.svg" alt=""><span>Hersbruck, Altensittenbach</span></li>
       </ul>
-      <img class="slogan" src="assets/Slogan_Ihr-gruener-Daumen_Wiesengruen.svg" alt="Ihr grüner Daumen!" style="filter:brightness(.78) saturate(1.3)">
+      <img class="slogan" src="assets/Slogan_Ihr-gruener-Daumen_Wiesengruen.svg" alt="Ihr grüner Daumen!" style="filter:none">
     </div>
     <form class="reveal" style="--d:.12s" id="form" novalidate>
       <label>Name<input type="text" name="name" placeholder="Ihr Name" autocomplete="name" required></label>
@@ -329,7 +338,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 </main>
 
 <footer>
-  <div class="band-top" aria-hidden="true"><img src="assets/icons/Stilelement_Band_breit_oben.svg" alt=""></div>
+  <div class="band-top" aria-hidden="true"><img src="assets/band-top.svg" alt=""></div>
   <div class="wrap">
     <div class="foot-main">
       <img class="logo" src="assets/Logo_Horizontal_Negativ.svg" alt="Jonas Gartenservice">
@@ -430,7 +439,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
 
 <!-- Hinweisfenster -->
 <dialog class="notice" id="notice" aria-labelledby="notice-h">
-  <img class="band-n" src="assets/icons/Stilelement_Band_breit_oben.svg" alt="" aria-hidden="true">
+  <img class="band-n" src="assets/band-top.svg" alt="" aria-hidden="true">
   <div class="notice-body">
     <h2 id="notice-h">Hinweis zum Datenschutz</h2>
     <p>Diese Website verwendet keine Tracking- oder Marketing-Cookies. Details finden Sie in der Datenschutzerklärung.</p>
