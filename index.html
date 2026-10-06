@@ -35,7 +35,7 @@ h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.01em}
 /* Header */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(60,60,59,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-.nav .logo img{height:40px;width:auto}
+.nav .logo img{height:34px;width:auto}
 .menu{display:flex;align-items:center;gap:34px;list-style:none;padding:0}
 .menu a:not(.btn){text-decoration:none;font-weight:600;font-size:16px;position:relative;padding:6px 0}
 .menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
@@ -49,13 +49,13 @@ h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.01em}
 
 /* Hero */
 .hero{position:relative;color:#fff;background:var(--anth);isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/img/hero.jpg) center/cover no-repeat;transform:scale(1.06);animation:slow-zoom 18s var(--ease) forwards}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(40,40,39,.9) 0%,rgba(40,40,39,.62) 55%,rgba(40,40,39,.25) 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url(assets/img/hero.jpg) 68% center/cover no-repeat;transform:scale(1.06);animation:slow-zoom 18s var(--ease) forwards}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(40,40,39,.88) 0%,rgba(40,40,39,.66) 50%,rgba(40,40,39,.42) 100%)}
 @keyframes slow-zoom{to{transform:scale(1)}}
 .hero-inner{padding:clamp(100px,13vw,180px) 0 clamp(130px,15vw,200px)}
 .hero-inner>*{max-width:740px}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:22px}
-.eyebrow.dk{color:var(--anth)}.eyebrow.dk::before{width:44px;height:5px}.eyebrow::before{content:"";width:34px;height:3px;background:var(--lime);border-radius:2px}
+.eyebrow.dk{color:var(--anth)}.eyebrow::before{content:"";flex:none;width:40px;height:4px;background:var(--lime);border-radius:2px}
 .hero h1{font-size:clamp(40px,7vw,78px);overflow-wrap:break-word;text-transform:uppercase;margin-bottom:24px}
 .hero p.lead{font-size:clamp(18px,2vw,21px);max-width:560px;color:rgba(255,255,255,.9);margin-bottom:38px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:14px}
@@ -96,7 +96,7 @@ section{padding:clamp(72px,10vw,128px) 0}
 .tick{list-style:none;padding:0;display:grid;gap:8px;margin-top:6px}
 .tick li{position:relative;padding-left:30px;font-weight:600;font-size:16px}
 .tick li::before{content:"";position:absolute;left:0;top:.45em;width:18px;height:10px;border-left:4px solid var(--lime);border-bottom:4px solid var(--lime);transform:rotate(-45deg) scale(.8);transform-origin:center}
-.s-saison{background:url(assets/img/saison.jpg) center 62%/cover no-repeat,url(assets/icons/Grafik_Gras_Gruen.svg) center 92%/72% auto no-repeat,var(--lime-20)}
+.s-saison{background:url(assets/img/laub.jpg) center 55%/cover no-repeat,url(assets/icons/Grafik_Gras_Gruen.svg) center 92%/72% auto no-repeat,var(--lime-20)}
 .s-icon-only .s-img-wrap{display:flex;align-items:center;justify-content:center}
 .s-icon-only .big{width:170px;height:170px}
 
@@ -128,7 +128,7 @@ textarea{min-height:140px;resize:vertical}
 footer{background:var(--anth);color:#fff;position:relative;padding-top:0}
 footer .band-top{position:relative;height:clamp(64px,7.2vw,116px)}footer .band-top img{width:100%;height:100%;display:block}
 .foot-main{display:flex;flex-wrap:wrap;gap:36px 60px;align-items:center;justify-content:space-between;padding:56px 0 40px}
-.foot-main img.logo{height:46px;width:auto}
+.foot-main img.logo{height:52px;width:auto}
 .foot-slogan{width:200px}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:22px 0 30px;display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;font-size:14px;color:rgba(255,255,255,.75)}
 .foot-bottom nav{display:flex;gap:26px;align-items:center}
@@ -280,7 +280,7 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
       </article>
 
       <article class="service reveal">
-        <div class="s-img-wrap"><div class="s-img s-saison" role="img" aria-label="Saisonarbeiten im Garten"></div></div>
+        <div class="s-img-wrap"><div class="s-img s-saison" role="img" aria-label="Rechen im Herbstlaub"></div></div>
         <div class="s-body">
           <img class="ico" src="assets/icons/Icon_Winterdienst_Kreis-Gruen.svg" alt="">
           <h3>Saisonarbeiten</h3>
@@ -318,9 +318,9 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
       <h2 style="font-size:clamp(32px,5vw,54px);text-transform:uppercase">Wir freuen uns auf <span class="hl">Ihre Anfrage</span></h2>
       <p style="margin-top:16px;color:var(--slate);font-size:19px">Wir beraten Sie persönlich und finden die passende Lösung für Ihr Anliegen.</p>
       <ul class="contact-list">
-        <li><img src="assets/icons/Icon_Mail_Gruen.svg" alt=""><a href="mailto:jonas@ibler.net">jonas@ibler.net</a></li>
-        <li><img src="assets/icons/Icon_Telefon_Gruen.svg" alt=""><a href="tel:+4916096431868">+49 160 96431868</a></li>
-        <li><img src="assets/icons/Icon_Standort_Gruen.svg" alt=""><span>Hersbruck, Altensittenbach</span></li>
+        <li><img src="assets/icons/Icon_Mail_Web.svg" alt=""><a href="mailto:jonas@ibler.net">jonas@ibler.net</a></li>
+        <li><img src="assets/icons/Icon_Telefon_Web.svg" alt=""><a href="tel:+4916096431868">+49 160 96431868</a></li>
+        <li><img src="assets/icons/Icon_Standort_Web.svg" alt=""><span>Hersbruck, Altensittenbach</span></li>
       </ul>
       <img class="slogan" src="assets/Slogan_Ihr-gruener-Daumen_Wiesengruen.svg" alt="Ihr grüner Daumen!" style="filter:none">
     </div>
@@ -373,7 +373,6 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
     <h2>Urheberrecht</h2>
     <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.</p>
     <p>Quelle: <a href="https://www.e-recht24.de/" target="_blank" rel="noopener">e-recht24.de</a></p>
-    <p style="margin-top:30px;color:var(--slate);font-size:14px">[Entwurf – bitte vor Veröffentlichung rechtlich prüfen und ggf. Steuer-/USt-IdNr. ergänzen, falls vorhanden.]</p>
   </div>
 </dialog>
 
@@ -432,7 +431,6 @@ dialog.notice::backdrop{background:rgba(40,40,39,.6);backdrop-filter:blur(3px)}
     <p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zweck der Bearbeitung Ihres Anliegens bei mir gespeichert und verarbeitet. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.</p>
     <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf meinem berechtigten Interesse an der effektiven Bearbeitung der Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde.</p>
     <p>Die von Ihnen an mich übersandten Daten verbleiben bei mir, bis Sie mich zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt, zum Beispiel nach abgeschlossener Bearbeitung Ihres Anliegens. Zwingende gesetzliche Bestimmungen, insbesondere gesetzliche Aufbewahrungsfristen, bleiben unberührt.</p>
-    <p style="margin-top:30px;color:var(--slate);font-size:14px">[Entwurf – bitte vor Veröffentlichung rechtlich prüfen und die Angaben zu Hosting und Domain-Anbieter auf Richtigkeit prüfen.]</p>
   </div>
 </dialog>
 
